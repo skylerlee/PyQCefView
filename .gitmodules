@@ -1,0 +1,3 @@
+[submodule "deps/QCefView"]
+	path = deps/QCefView
+	url = https://github.com/CefView/QCefView.git
