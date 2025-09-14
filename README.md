@@ -28,6 +28,12 @@ git clone --recursive https://github.com/skylerlee/PyQCefView.git
 pip install -r requirements-dev.txt
 ```
 
+- Build the PyQCefView (Python wrapper)
+
+```sh
+sip-install --cef-incdir=<QCEFVIEW_INCLUDE_DIR> --cef-libdir=<QCEFVIEW_OUTPUT_DIR> --cef-lib=QCefView [--verbose]
+```
+
 ## License
 
 The MIT License.
