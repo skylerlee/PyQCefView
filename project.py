@@ -34,7 +34,9 @@ class QCefViewBindings(PyQtBindings):
         required_options = ["cef_incdir", "cef_libdir", "cef_lib"]
         for opt in required_options:
             if not getattr(self, opt):
-                raise UserException(f"Option --{opt.replace('_', '-')}=<path> is required (or set in the config file)")
+                raise UserException(
+                    f"Option --{opt.replace('_', '-')}=<path> is required (or set in the config file)"
+                )
         super().verify_configuration(tool)
 
 
