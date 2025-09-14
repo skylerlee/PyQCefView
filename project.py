@@ -1,7 +1,7 @@
 import sys
 
 from pyqtbuild import PyQtBindings, PyQtProject, QmakeBuilder
-from sipbuild import Option
+from sipbuild import Option, UserException
 
 
 class QCefViewBindings(PyQtBindings):
@@ -29,6 +29,13 @@ class QCefViewBindings(PyQtBindings):
             self.library_dirs += [self.cef_libdir]
             self.libraries += [self.cef_lib]
         return super().apply_user_defaults(tool)
+
+    def verify_configuration(self, tool):
+        required_options = ["cef_incdir", "cef_libdir", "cef_lib"]
+        for opt in required_options:
+            if not getattr(self, opt):
+                raise UserException(f"Option --{opt.replace('_', '-')}=<path> is required (or set in the config file)")
+        super().verify_configuration(tool)
 
 
 class QCefViewProject(PyQtProject):
