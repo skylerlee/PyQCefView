@@ -1,0 +1,3 @@
+sip >=6.9, <7
+pyqt-builder >=1.17, <2
+pyqt6
