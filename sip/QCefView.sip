@@ -64,16 +64,13 @@ public:
                                      const QString& url,
                                      const QString& context);
     bool setPreference(const QString& name, const QVariant& value, const QString& error);
-    void setOSRFrameRate(int fps);
+    void setDisablePopupContextMenu(bool disable);
+    bool isPopupContextMenuDisabled();
     bool hasDevTools();
     void showDevTools();
     void closeDevTools();
-    void setAllowDrag(bool allow);
-    bool allowDrag() const;
-    void setZoomLevel(double level);
-    double zoomLevel();
-
-    virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const;
+    void setEnableDragAndDrop(bool enable);
+    bool isDragAndDropEnabled() const;
 
 signals:
     void loadingStateChanged(const int& browserId, bool isLoading, bool canGoBack, bool canGoForward);
@@ -122,8 +119,4 @@ protected:
     // virtual void onNewDownloadItem(const QSharedPointer<QCefDownloadItem>& item, const QString& suggestedName);
     // virtual void onUpdateDownloadItem(const QSharedPointer<QCefDownloadItem>& item);
     virtual bool onRequestCloseFromWeb();
-
-    virtual QPaintEngine* paintEngine() const;
-    virtual void paintEvent(QPaintEvent* event);
-    virtual bool event(QEvent* event);
 };

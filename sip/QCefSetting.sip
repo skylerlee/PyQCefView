@@ -8,8 +8,6 @@ public:
     QCefSetting();
     QCefSetting(const QCefSetting& other);
     ~QCefSetting();
-    void setOffScreenRenderingEnabled(const bool value);
-    const bool OffScreenRenderingEnabled() const;
     void setWindowInitialSize(const QSize& size);
     const QSize windowInitialSize() const;
     void setStandardFontFamily(const QString& value);
@@ -28,8 +26,6 @@ public:
     const QString defaultEncoding() const;
     void setWindowlessFrameRate(const int value);
     const QVariant windowlessFrameRate() const;
-    void setHardwareAccelerationEnabled(const bool value);
-    const bool hardwareAccelerationEnabled() const;
     void setDefaultFontSize(const int value);
     const QVariant defaultFontSize() const;
     void setDefaultFixedFontSize(const int value);
@@ -64,4 +60,6 @@ public:
     const QVariant webGL() const;
     void setBackgroundColor(const QColor& value);
     const QVariant backgroundColor() const;
+    void setHardwareAcceleration(const bool value);
+    const bool hardwareAcceleration() const;
 };
