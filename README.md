@@ -38,6 +38,14 @@ sip-install --cef-incdir=<QCEFVIEW_INCLUDE_DIR> --cef-libdir=<QCEFVIEW_OUTPUT_DI
 
 ```sh
 sip-wheel --cef-incdir=<QCEFVIEW_INCLUDE_DIR> --cef-libdir=<QCEFVIEW_OUTPUT_DIR> --cef-lib=QCefView [--verbose]
+
+pip install qcefview-*.whl
+```
+
+### Run the example
+
+```sh
+python examples/demo.py
 ```
 
 ## License
