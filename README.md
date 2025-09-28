@@ -2,6 +2,20 @@
 
 PyQCefView is a simple Python binding for [QCefView](https://github.com/CefView/QCefView)
 
+## Dependencies
+
+This project depends on:
+
+- **QCefView v1.2.0**
+  You must build and provide the QCefView C++ library version 1.2.0.
+  See: [QCefView v1.2.0 Release](https://github.com/CefView/QCefView/tree/v1.2.0)
+
+- **Chromium 126.0.6478.183**
+  QCefView v1.2.0 is based on Chromium version 126.0.6478.183.
+  See: [Chromium source](https://github.com/chromium/chromium/tree/126.0.6478.183)
+
+Please ensure you use the correct versions of both QCefView and Chromium for compatibility with PyQCefView.
+
 ## Build & install
 
 General prerequisites
