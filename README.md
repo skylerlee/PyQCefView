@@ -62,6 +62,11 @@ pip install qcefview-*.whl
 python examples/demo.py
 ```
 
+It should load a webpage normally.
+
+![screenshot](https://github.com/user-attachments/assets/a8658388-b91a-4997-972e-bd28ee03a2cd)
+
 ## License
 
 The MIT License.
+
