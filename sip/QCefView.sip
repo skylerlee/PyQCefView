@@ -1,5 +1,7 @@
 %Module(name=QCefView, language="C++")
 
+%Platforms {WIN32_PLATFORM POSIX_PLATFORM MACOS_PLATFORM}
+
 %Import QtCore/QtCoremod.sip
 %Import QtWidgets/QtWidgetsmod.sip
 

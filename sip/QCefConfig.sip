@@ -27,12 +27,14 @@ public:
     const QVariant sandboxDisabled() const;
     void setCommandLinePassthroughDisabled(const bool disabled);
     const QVariant commandLinePassthroughDisabled() const;
+%If (!MACOS_PLATFORM)
     void setBrowserSubProcessPath(const QString& path);
     const QString browserSubProcessPath() const;
     void setResourceDirectoryPath(const QString& path);
     const QString resourceDirectoryPath() const;
     void setLocalesDirectoryPath(const QString& path);
     const QString localesDirectoryPath() const;
+%End
     void setLogLevel(const LogLevel lvl);
     const QCefConfig::LogLevel logLevel() const;
     void setLocale(const QString& locale);
